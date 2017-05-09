@@ -13,31 +13,41 @@ export class menu {
 
     navArray =[{
         name : "Home",
-        icon : "home"
+        icon : "home",
+        clickCls : true
+        
     },{
         name : "Profile",
-        icon : "account_circle"
+        icon : "account_circle",
+        clickCls : false
     },{
         name : "Email",
-        icon : "email"
+        icon : "email",
+        clickCls : false
     },{
         name : "Charts",
-        icon : "show_chart"
+        icon : "show_chart",
+        clickCls : false
     },{
         name : "Chat",
-        icon : "chat_bubble"
+        icon : "chat_bubble",
+        clickCls : false
     },{
         name : "Dashboard",
-        icon : "dashboard"
+        icon : "dashboard",
+        clickCls : false
     },{
         name : "Profile",
-        icon : "account_circle"
+        icon : "account_circle",
+        clickCls : false
     },{
         name : "Email",
-        icon : "email"
+        icon : "email",
+        clickCls : false
     },{
         name : "Charts",
-        icon : "show_chart"
+        icon : "show_chart",
+        clickCls : false
     } ] 
 
     sideNavToggle() {
@@ -46,5 +56,12 @@ export class menu {
     }
     sideNavClose() {
         this.sidenav.close(); 
+    }
+
+    changeColor(obj){ 
+        for(var i=0; i<=this.navArray.length -1; i++){
+            this.navArray[i].clickCls = false
+        }
+        obj.clickCls = true;
     }
  }

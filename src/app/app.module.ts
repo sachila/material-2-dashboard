@@ -5,9 +5,18 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout'; 
+import {UIRouterModule} from "@uirouter/angular";
+import { ROUTES } from "@angular/router";
+import { GaugeModule  } from 'ng-gauge';
+
 
 import { AppComponent } from './app.component';
 import { menu } from './shell/menu/rasm-menu';
+import { dash } from './shell/dashboard/rasm-dash';
+import {uiRouterConfigFn} from "./app.route.config";
+import {home} from "./app.state";
+
+let state = [home];
 
 let imports = [
     BrowserModule,
@@ -15,13 +24,14 @@ let imports = [
     HttpModule,
     MaterialModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule ,
+    GaugeModule 
   ]
   
 @NgModule({
   declarations: [
     AppComponent,
-    menu
+    menu,dash
   ],
   imports: imports,
   providers: [],
