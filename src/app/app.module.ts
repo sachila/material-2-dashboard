@@ -8,6 +8,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {UIRouterModule} from "@uirouter/angular";
 import { ROUTES } from "@angular/router";
 import { GaugeModule  } from 'ng-gauge';
+import { ChartModule } from 'angular2-highcharts';
+import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
 
 
 import { AppComponent } from './app.component';
@@ -15,6 +17,11 @@ import { menu } from './shell/menu/rasm-menu';
 import { dash } from './shell/dashboard/rasm-dash';
 import {uiRouterConfigFn} from "./app.route.config";
 import {home} from "./app.state";
+
+declare var require: any;
+export function highchartsFactory() {
+  return require('highcharts');
+}
 
 let state = [home];
 
@@ -25,6 +32,7 @@ let imports = [
     MaterialModule,
     BrowserAnimationsModule,
     FlexLayoutModule ,
+    ChartModule,
     GaugeModule 
   ]
   
@@ -34,7 +42,10 @@ let imports = [
     menu,dash
   ],
   imports: imports,
-  providers: [],
+  providers: [{
+      provide: HighchartsStatic,
+      useFactory: highchartsFactory
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

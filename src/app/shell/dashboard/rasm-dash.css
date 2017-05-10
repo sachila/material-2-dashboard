@@ -1,0 +1,23 @@
+.card-class{
+	background-color: #100d25;
+    box-shadow: 3px 2px 5px #020a47;
+    border-radius: 10px; 
+	width: 60%;
+    height: 100px;
+}
+.card-text{	
+	color: #00daff;
+	font-size: 28px;
+}
+.card-text-sub{	
+	color: #ffffff;
+	font-size: 22px;
+}
+.card-profile{	
+	color: #00daff;
+	font-size: 18px;
+}
+.card-profile-text{	
+	color: #ffffff;
+	font-size: 14px;
+}
