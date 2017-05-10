@@ -1,0 +1,116 @@
+ 
+ 
+<div style=" height: 100%;" fxFlex>
+	<div style="padding: 15px; height: 100%;" fxFlex="55" fxLayout="column" >
+		
+		 <div fxFlex="70">
+		 	 <chart [options]="options" ></chart>
+		 </div>
+		 <div fxFlex style="width: 97%;" >
+		 	
+			 <md-card class="card-class" fxFlex fxLayoutAlign="start start" style="height: 121px;">
+
+				<img fxLayout src="http://i2.cdn.cnn.com/cnnnext/dam/assets/150106174732-derek-van-dam-profile-super-169.jpeg" 
+				style="width: 100px;height: 100px;border-radius: 60px; margin-top: -10px;">
+				<div fxFlex="5"></div>
+				<div fxFlex fxLayout="column" >
+					<span fxFlex class="card-profile">
+						Sachila Ranawaka 
+					</span>
+					<div fxFlex="15" style="height: 10px;"></div>
+					<span fxFlex class="card-profile-text">
+						had adhia hfau aoisi ioasui faisu  foias duiaf oia fuauf a foiauf o fufuf uo afif is fioas hfio fiaohisoa hfs afoiahfis faio hfis foaihoi  fuhfuaiha fh ufauf hai hfuia fhoishf ufhua fuhfusUhv suhfdu su 
+					</span>
+				</div>
+			</md-card>   
+		 </div>
+	</div>
+	<div style="padding: 15px; height: 100%;" fxFlex fxLayout="column" fxLayoutAlign="start center">
+		<md-card class="card-class" fxFlex="20" fxLayoutAlign="start start">
+			<div fxFlex fxLayoutAlign="start start" fxLayout="column"> 
+				<span fxFlex class="card-text" >
+					New Visits
+				</span>
+				<span fxFlex class="card-text-sub">
+					57,820
+				</span>
+			</div>
+
+			<ng-gauge style="margin-top: -10px;width: 92px;"
+			  [bgRadius] = 'visit.bgRadius'
+			  [bgColor] = 'visit.bgColor'
+			  [rounded] = 'visit.rounded'
+			  [reverse] = 'visit.reverse'
+			  [animationSecs] = 'visit.animationSecs'
+			  [labels] = 'visit.labels'
+			  [segments] = 'visit.segments'>
+			</ng-gauge>
+		</md-card>  
+ 
+
+		<div fxFlex> </div> 
+
+		<md-card class="card-class" fxFlex="20"> 
+			<div fxFlex fxLayoutAlign="start start" fxLayout="column"> 
+				<span fxFlex class="card-text" >
+					Purchases
+				</span>
+				<span fxFlex class="card-text-sub">
+					$89,745
+				</span>
+			</div>
+			<ng-gauge style="margin-top: -10px;width: 92px;"
+			  [bgRadius] = 'purchase.bgRadius'
+			  [bgColor] = 'purchase.bgColor'
+			  [rounded] = 'purchase.rounded'
+			  [reverse] = 'purchase.reverse'
+			  [animationSecs] = 'purchase.animationSecs'
+			  [labels] = 'purchase.labels'
+			  [segments] = 'purchase.segments'>
+			</ng-gauge>
+		</md-card> 
+		<div fxFlex> </div> 
+		<md-card class="card-class" fxFlex="20">
+			<div fxFlex fxLayoutAlign="start start" fxLayout="column"> 
+				<span fxFlex class="card-text" >
+					Active Users
+				</span>
+				<span fxFlex class="card-text-sub">
+					178,391
+				</span>
+			</div> 
+
+			<ng-gauge style="margin-top: -10px;width: 92px;"
+			  [bgRadius] = 'users.bgRadius'
+			  [bgColor] = 'users.bgColor'
+			  [rounded] = 'users.rounded'
+			  [reverse] = 'users.reverse'
+			  [animationSecs] = 'users.animationSecs'
+			  [labels] = 'users.labels'
+			  [segments] = 'users.segments'>
+			</ng-gauge>
+		</md-card> 
+		<div fxFlex> </div> 
+		<md-card class="card-class" fxFlex="20">
+			<div fxFlex fxLayoutAlign="start start" fxLayout="column"> 
+				<span fxFlex class="card-text" >
+					Returned
+				</span>
+				<span fxFlex class="card-text-sub">
+					32,592
+				</span>
+			</div> 
+
+			<ng-gauge style="margin-top: -10px;width: 92px;"
+			  [bgRadius] = 'return.bgRadius'
+			  [bgColor] = 'return.bgColor'
+			  [rounded] = 'return.rounded'
+			  [reverse] = 'return.reverse'
+			  [animationSecs] = 'return.animationSecs'
+			  [labels] = 'return.labels'
+			  [segments] = 'return.segments'>
+			</ng-gauge>
+		</md-card> 
+		<div fxFlex="10"> </div> 
+	</div>
+</div>
