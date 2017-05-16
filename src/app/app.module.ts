@@ -10,20 +10,23 @@ import { ROUTES } from "@angular/router";
 import { GaugeModule  } from 'ng-gauge';
 import { ChartModule } from 'angular2-highcharts';
 import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
+import { SlimScrollModule } from 'ng2-slimscroll';
 
 
 import { AppComponent } from './app.component';
+import { loader } from './shell/loader/rasm-loader';
 import { menu } from './shell/menu/rasm-menu';
 import { dash } from './shell/dashboard/rasm-dash';
+import { profile } from './shell/profile/rasm-profile';
 import {uiRouterConfigFn} from "./app.route.config";
-import {home} from "./app.state";
+import {dashState,profileState,loaderState,menuState} from "./app.state";
 
 declare var require: any;
 export function highchartsFactory() {
   return require('highcharts');
 }
 
-let state = [home];
+let state = [dashState,profileState,loaderState,menuState];
 
 let imports = [
     BrowserModule,
@@ -31,15 +34,24 @@ let imports = [
     HttpModule,
     MaterialModule,
     BrowserAnimationsModule,
-    FlexLayoutModule ,
+    FlexLayoutModule,
     ChartModule,
-    GaugeModule 
+    GaugeModule,
+    UIRouterModule.forRoot({
+      'states': state,
+      'useHash': true,
+      'config': uiRouterConfigFn
+    }),
+    SlimScrollModule
   ]
   
 @NgModule({
   declarations: [
     AppComponent,
-    menu,dash
+    menu,
+    dash,
+    profile,
+    loader
   ],
   imports: imports,
   providers: [{

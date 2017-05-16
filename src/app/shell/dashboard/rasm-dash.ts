@@ -1,5 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild,OnInit } from '@angular/core';
 import { GaugeSegment, GaugeLabel } from 'ng-gauge';
+import { ISlimScrollOptions } from 'ng2-slimscroll';
 
 // var Gauge = require('gauge.js');
 
@@ -9,11 +10,22 @@ import { GaugeSegment, GaugeLabel } from 'ng-gauge';
  	templateUrl : "./rasm-dash.html", 
  })
 
-export class dash { 
+export class dash implements OnInit {  
+    opts: ISlimScrollOptions;
+
+    ngOnInit() {
+      this.opts = {
+        position: 'right',
+        barBackground: '#000000'
+      }
+    }
+
+
     options =  {  
        "chart":{  
            "type":'column',
-           "backgroundColor": '#100d25'
+           "backgroundColor": '#100d25',
+           'borderRadius': '15'
              
        },
        "title":{  
@@ -125,7 +137,7 @@ colors = {
     labels: [      
       new GaugeLabel({
         color: this.colors.lightBlue,
-        text: '92%',
+        text: '77%',
         x: 0,
         y: 0,
         fontSize: '2em'
@@ -133,7 +145,7 @@ colors = {
     ],
     segments: [
       new GaugeSegment({
-        value: 92,
+        value: 77,
         color: this.colors.lightBlue,
         borderWidth: 20
       })

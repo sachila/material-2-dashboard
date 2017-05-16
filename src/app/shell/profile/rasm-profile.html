@@ -1,0 +1,96 @@
+<div style="width: 100%; height: 100%;" >
+	 <div fxFlex style="padding: 30px;width: 460px;height: 90%" fxLayout="column">
+	 	<div class="card-class" fxFlex="20" fxLayoutAlign="start start" style="width: 100%;">
+  			<img fxLayout src="http://i2.cdn.cnn.com/cnnnext/dam/assets/150106174732-derek-van-dam-profile-super-169.jpeg" 
+				style="width: 200px;z-index: 1;height: 200px;box-shadow: rgb(95, 107, 109) 2px 3px 8px;border-radius: 100px;margin-left: 25%;">
+		</div> 
+	 	 <md-card class="card-class" fxFlex fxLayout="column" fxLayoutAlign="start center" style="width: 100%;background-color:rgb(4, 0, 27);border-radius: 15px;">
+	 	 	<div fxFlex="30" >
+	 	 		
+	 	 	</div>
+  			<div fxFlex="10">
+  				<span style="color: #a0aab4;font-weight: bold;">  
+  					CEO / FOUNDER
+  				</span>
+  			</div>
+  			<div fxFlex="10">
+  				<span style="color: #00daff;">  
+  					Sachila Ranawaka
+  				</span>
+  			</div>
+  			<div fxFlex="25" style="text-align: center;">
+  				<span style="color: white;">  
+  					Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+  				</span>
+  			</div>  
+	        <div fxFlex="15" fxLayout fxLayoutAlign="center center" >
+	            <div style="width:24%; display:inline-block">           
+	              <img src="../../assets/images/social/google.png" style="width:60%;cursor: pointer;" /> 
+	            </div>
+	            <div style="width:24%; display:inline-block"  fxFlex fxLayout fxLayoutAlign="center end">             
+	              <img src="../../assets/images/social/facebook.png"  style="width:60%;cursor: pointer;"  /> 
+	            </div>
+	            <div style="width:24%; display:inline-block"  fxFlex fxLayout fxLayoutAlign="end end">           
+	              <img src="../../assets/images/social/twiter.png"  style="width:60%;cursor: pointer;"  /> 
+	            </div>
+	            <div style="width:24%; display:inline-block" fxFlex fxLayout fxLayoutAlign="end end" >           
+	              <img src="../../assets/images/social/linkdin.png"  style="width:60%;cursor: pointer;"  /> 
+	            </div>
+		    </div>
+		</md-card> 
+	</div> 
+	<div fxFlex style="width: 700px; height: 90%;padding: 30px;">
+		<md-card class="card-class" fxFlex fxLayout="column" fxLayoutAlign="start center" style="width: 100%;background-color:rgb(4, 0, 27);border-radius: 15px;width: 700px; ">
+
+			 <form  class='example-form' novalidate (ngSubmit)="submit()"> 
+
+			 	<div fxFlex fxLayout="column">
+			 		<div fxFlex="15" fxLayout="row">				 		
+					 	<md-input-container fxFlex> 
+					    	<input mdInput placeholder='Company' [(ngModel)] = 'Company'  name='Company'>  
+					    </md-input-container> 
+					    <div fxFlex="5"></div>
+					 	<md-input-container fxFlex> 
+					    	<input mdInput placeholder='Username' [(ngModel)] = 'Username'  name='Username'>  
+					    </md-input-container> 
+				 	</div>
+			 		<div fxFlex="15" fxLayout="row">				 		
+					 	<md-input-container fxFlex> 
+					    	<input mdInput placeholder='First Name' [(ngModel)] = 'firstname'  name='firstname'>  
+					    </md-input-container> 
+					    <div fxFlex="5"></div>
+					 	<md-input-container fxFlex> 
+					    	<input mdInput placeholder='Last Name' [(ngModel)] = 'lastName'  name='lastName'>  
+					    </md-input-container> 
+				 	</div>
+			 		<div  fxFlex="15" fxLayout="row">				 		
+					 	<md-input-container fxFlex> 
+					    	 <input mdInput placeholder='Address' [(ngModel)] = 'address'  name='address'>  
+					    </md-input-container>  
+				 	</div>
+			 		<div  fxFlex="15" fxLayout="row">				 		
+					 	<md-input-container fxFlex> 
+					    	<input mdInput placeholder='city' [(ngModel)] = 'city'  name='city'>  
+					    </md-input-container> 
+					    <div fxFlex="5"></div>
+					 	<md-input-container fxFlex> 
+					    	<input mdInput placeholder='Country' [(ngModel)] = 'Country'  name='Country'>  
+					    </md-input-container> 
+					    <div fxFlex="5"></div>
+					 	<md-input-container fxFlex> 
+					    	<input mdInput placeholder='Postal Code' [(ngModel)] = 'postalCode'  name='postalCode'>  
+					    </md-input-container> 
+				 	</div>
+			 		<div  fxFlex="15" fxLayout="row">				 		
+					 	<md-input-container fxFlex> 
+					    	 <input mdInput placeholder='Notes' [(ngModel)] = 'notes'  name='notes'>  
+					    </md-input-container>  
+				 	</div>
+			 		<div  fxFlex="15" fxLayout="row" fxLayoutAlign="center center" >				 		
+					 	<button md-button class="primary submit-btn" type="submit">Submit</button>
+				 	</div> 
+			 	</div> 
+			  </form> 
+		</md-card> 
+	</div>
+</div>

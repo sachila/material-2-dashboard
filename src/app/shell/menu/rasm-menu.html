@@ -1,10 +1,29 @@
   
 
 <md-toolbar class="main" class="toolbar">
-  <div>
-  	<span class="title"  >DashBoard</span> 
- 
-  </div>
+  	<div fxFlex>
+	  	<span class="title" style="color:#9d45b3">Rasm</span> 
+	  	<span class="title" style="color:white">Tech</span> 	 
+  	</div> 
+  	<div fxFlex="13" fxLayoutAlign="center center"> 
+	  	<div fxFlex  fxLayoutAlign="start start">
+	 		<i class="material-icons wrap center wave">mail_outline</i>	 
+	 		<div class="notify-icon" fxFlex="33" fxLayoutAlign="center center" >
+	 			<span class="notifiNum">3</span>
+	 		</div> 	
+	  	</div> 
+	  	<div fxFlex fxLayoutAlign="start start">
+	 		<i class="material-icons wrap center wave">notifications_none</i>	 
+	 		<div class="notify-icon" fxFlex="33" fxLayoutAlign="center center">
+	 			<span class="notifiNum">1</span>
+	 		</div> 	  	
+	  	</div> 
+	 	<div fxFlex="40" > 
+	 		<img fxLayout src="http://www.gantrypark.com/Portals/12/Users/066/14/53314/adam-parker-large.jpg" 
+			style="width: 50px;height: 50px;border-radius: 50px;">	
+	 	</div> 
+  	</div>
+  	<div fxFlex="1"> </div>
 </md-toolbar>
  
 <div style=" height: 100%;"  >
@@ -25,5 +44,7 @@
 	     	</div> 
 	    </md-sidenav> 
 	</md-sidenav-container>
-	<app-dash fxFlex>	</app-dash>
+	
+
+  <ui-view>  </ui-view> 
 </div>

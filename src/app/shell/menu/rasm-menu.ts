@@ -1,5 +1,8 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild,OnInit } from '@angular/core';
 import { MdSidenav } from '@angular/material';
+import { StateService } from "@uirouter/angular";
+import { ISlimScrollOptions } from 'ng2-slimscroll';
+
 
  @Component({
  	selector : 'app-menu',
@@ -7,18 +10,31 @@ import { MdSidenav } from '@angular/material';
  	templateUrl : "./rasm-menu.html", 
  })
 
-export class menu {
+export class menu implements OnInit {
+    opts: ISlimScrollOptions;
+
+    ngOnInit() {
+      this.opts = {
+        position: 'right',
+        barBackground: '#000000'
+      }
+    }
+
     @ViewChild('right') sidenav: MdSidenav;
  
+    constructor(private state : StateService){
 
+    }
     navArray =[{
         name : "Home",
         icon : "home",
+        state : 'home.dash',
         clickCls : true
         
     },{
         name : "Profile",
         icon : "account_circle",
+        state : 'home.profile',
         clickCls : false
     },{
         name : "Email",
@@ -63,5 +79,11 @@ export class menu {
             this.navArray[i].clickCls = false
         }
         obj.clickCls = true;
+
+        this.changeState(obj);
+    }
+
+    changeState(obj){ 
+        this.state.go(obj.state);
     }
  }
